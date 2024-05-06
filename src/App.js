@@ -1,8 +1,9 @@
 import './index.css'
-import { Auth } from "./components/Auth"
+import { Welcome } from "./components/Welcome"
+import { LogIn } from "./components/LogIn"
 import { Home } from "./components/Home"
 import { Helmet } from "react-helmet"
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
@@ -14,8 +15,12 @@ function App() {
         </Helmet>
         <Routes>
           <Route
-            path="/"
-            element={<Auth/>}
+            exact path="/"
+            element={<Welcome/>}
+          />
+          <Route
+            exact path="/login"
+            element={<LogIn/>}
           />
           <Route
             path="/home"
