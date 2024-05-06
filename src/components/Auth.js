@@ -1,6 +1,8 @@
+import "../index.css"
 import { auth, googleProvider } from "../config/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
+import { Helmet } from "react-helmet"
 
 export const Auth = () => {
 
@@ -38,18 +40,36 @@ export const Auth = () => {
 
     return (
         <div>
-            <input 
+            <Helmet>
+                <title>Sign In</title>
+            </Helmet>
+            <input className="input-field"
                 placeholder="Email..."
                 onChange={(e) => setEmail(e.target.value)}
             />
-            <input
+            <input className="input-field"
                 placeholder="Password..."
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick = {signInWithEmail}>Sign In</button>
-            <button onClick = {signInWithGoogle}>Sign in with Google</button>
-            <button onClick = {logOut}>Logout</button>
+            <button
+                onClick = {signInWithEmail}
+                className="submit-button"
+            >
+                Sign In
+            </button>
+            <button
+                onClick = {signInWithGoogle}
+                className="alternate-button"
+            >
+                Sign in with Google
+            </button>
+            <button
+                onClick = {logOut}
+                className="caution-button"
+            >
+                Logout
+            </button>
         </div>
     )
 }
