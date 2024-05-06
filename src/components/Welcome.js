@@ -26,6 +26,15 @@ export const Welcome = () => {
         Log in
         <i className="material-icons">trending_flat</i>
       </button>
+      <p>
+        Don't have an account?
+        <span
+          className="paragraph-link"
+          style={{fontWeight:"900"}}
+          onClick={toCreateAccount}>
+            Sign Up
+          </span>
+      </p>
     </div>
   );
 }

@@ -1,20 +1,22 @@
 import "../index.css"
 import { auth, googleProvider } from "../config/firebase";
-import { signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
 import { Helmet } from "react-helmet"
 import { useNavigate } from "react-router-dom";
 
-export const LogIn = () => {
+export const CreateLogIn = () => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
   const navigate = useNavigate()
 
+  console.log(auth?.currentUser?.email)
+
   const signInWithEmail = async () => {
     try{
-      await signInWithEmailAndPassword(auth, email, password)
+      await createUserWithEmailAndPassword(auth, email, password)
       navigate("/home")
     }
     catch (err) {
@@ -32,22 +34,12 @@ export const LogIn = () => {
     }
   }
 
-  const logOut = async () => {
-    try {
-      await signOut(auth)
-    }
-    catch (err) {
-      alert(err.code)
-    }
-    navigate("/")
-  }
-
   return (
     <div>
       <Helmet>
         <title>Sign In</title>
       </Helmet>
-      <h1>Log In</h1>
+      <h1>Create Account</h1>
       <input className="input-field"
         placeholder="Email..."
         onChange={(e) => setEmail(e.target.value)}
@@ -68,12 +60,6 @@ export const LogIn = () => {
         className="alternate-button"
       >
         Sign in with Google
-      </button>
-      <button
-        onClick = {logOut}
-        className="caution-button"
-      >
-        Logout
       </button>
     </div>
   )
