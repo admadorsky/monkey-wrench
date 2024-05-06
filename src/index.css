@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  width: 100%;
+}
+
+.welcome-wrapper {
+  text-align: center;
+}
+
+html {
+  background-image: linear-gradient(#e6cc9a, #e2c07d);
+  height: 100vh;
+}
+
+.img-artwork {
+  width: 100%;
+  max-width: 500px;
+  float: left;
+}
+
+.submit-button {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #09131c;
+  color: #e6cc9a;
+  padding: 15px 40px 10px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 2px solid #09131c;
+}
+
+.button-text {
+  font-family: "Zilla Slab", serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.button-icon {
+  margin-left: auto;
+}
+
+h1 {
+  clear: both;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 44px;
+  font-weight: 700;
+  font-style: bold;
+  color: #09131c;
+  padding: 50px 0px 10px;
+}
+
+p {
+  font-family: "Zilla Slab", serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  padding: 0px 40px 60px;
+}
+
+.paragraph-link {
+  padding: 0px 10px 0px;
+}
+
+.paragraph-link:hover {
+  color: #2e84a0;
 }

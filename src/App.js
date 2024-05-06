@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="wrapper">
         <Helmet>
           <title>MonkeyWrench</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
