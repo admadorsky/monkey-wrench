@@ -2,7 +2,7 @@ import "../index.css"
 import { auth, googleProvider } from "../config/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
-import { Helmet } from "react-helmet"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 import { useNavigate } from "react-router-dom";
 
 export const CreateLogIn = () => {
@@ -35,32 +35,34 @@ export const CreateLogIn = () => {
   }
 
   return (
-    <div>
-      <Helmet>
-        <title>Sign In</title>
-      </Helmet>
-      <h1>Create Account</h1>
-      <input className="input-field"
-        placeholder="Email..."
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input className="input-field"
-        placeholder="Password..."
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button
-        onClick = {signInWithEmail}
-        className="submit-button"
-      >
-        Sign In
-      </button>
-      <button
-        onClick = {signInWithGoogle}
-        className="alternate-button"
-      >
-        Sign in with Google
-      </button>
-    </div>
+    <HelmetProvider>
+      <div>
+        <Helmet>
+          <title>Sign In</title>
+        </Helmet>
+        <h1>Create Account</h1>
+        <input className="input-field"
+          placeholder="Email..."
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input className="input-field"
+          placeholder="Password..."
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          onClick = {signInWithEmail}
+          className="submit-button"
+        >
+          Sign In
+        </button>
+        <button
+          onClick = {signInWithGoogle}
+          className="alternate-button"
+        >
+          Sign in with Google
+        </button>
+      </div>
+    </HelmetProvider>
   )
 }

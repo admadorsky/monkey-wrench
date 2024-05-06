@@ -9,6 +9,7 @@
 
 .welcome-wrapper {
   text-align: center;
+  height: 100vh;
 }
 
 html {
@@ -17,8 +18,8 @@ html {
 }
 
 .img-artwork {
-  width: 100%;
-  max-width: 500px;
+  width: auto;
+  height: 60%;
   float: left;
 }
 
@@ -29,7 +30,7 @@ html {
   justify-content: space-between;
   background-color: #09131c;
   color: #e6cc9a;
-  padding: 15px 40px 10px;
+  padding: 8px 30px 8px;
   margin: 0 auto;
   margin-bottom: 15px;
   border-radius: 12px;
@@ -52,20 +53,22 @@ h1 {
   clear: both;
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
-  font-size: 44px;
+  font-size: 34px;
   font-weight: 700;
   font-style: bold;
   color: #09131c;
-  padding: 50px 0px 10px;
+  padding: 30px 0px 8px;
 }
 
 p {
   font-family: "Zilla Slab", serif;
   font-optical-sizing: auto;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   font-style: normal;
-  padding: 0px 40px 60px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0px 0px 20px;
 }
 
 .paragraph-link {
@@ -74,4 +77,46 @@ p {
 
 .paragraph-link:hover {
   color: #2e84a0;
+}
+
+@media only screen and (min-width: 380px) {
+  .img-artwork {
+    width: 100%;
+    height: auto;
+  }
+
+  .submit-button {
+    padding: 15px 40px 15px;
+  }
+
+  h1 {
+    font-size: 44px;
+    padding: 50px 0px 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    padding: 0px 0px 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .img-artwork {
+    width: auto;
+    height: 65%;
+  }
+  
+  .submit-button {
+    width: 50%;
+  }
+
+  p {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
 }
