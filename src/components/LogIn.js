@@ -1,4 +1,3 @@
-import "../index.css"
 import { auth, googleProvider } from "../config/firebase";
 import { signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
@@ -44,7 +43,7 @@ export const LogIn = () => {
 
   return (
     <HelmetProvider>
-      <div>
+      <div className="login-wrapper">
         <Helmet>
           <title>Sign In</title>
         </Helmet>

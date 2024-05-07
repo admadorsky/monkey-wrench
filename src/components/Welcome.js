@@ -1,4 +1,3 @@
-import "../index.css"
 import { useNavigate } from "react-router-dom";
 import welcomeImage from "../img/Welcome_3x.png"
 import { Helmet, HelmetProvider } from "react-helmet-async";

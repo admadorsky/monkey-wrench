@@ -1,0 +1,68 @@
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #09131c;
+  color: #e6cc9a;
+  padding: 8px 30px 8px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 2px solid #09131c;
+}
+
+.submit-button:hover {
+  color: #09131c;
+  background-color: #00000000;
+}
+
+.button-text {
+  font-family: "Zilla Slab", serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.welcome-wrapper .button-icon {
+  margin-left: auto;
+}
+
+p {
+  font-family: "Zilla Slab", serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  padding: 0px 0px 20px;
+}
+
+@media only screen and (min-width: 380px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .button-text {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 54px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,103 @@
+.welcome-wrapper {
+  text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(#e6cc9a, #e2c07d);
+}
+
+.welcome-wrapper .img-artwork {
+  width: auto;
+  height: 60%;
+  float: left;
+}
+
+.welcome-wrapper .submit-button {
+  width: 80%;
+}
+
+.welcome-wrapper h1 {
+  clear: both;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 34px;
+  font-weight: 700;
+  font-style: bold;
+  color: #09131c;
+  padding: 30px 0px 8px;
+}
+
+.welcome-wrapper p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.welcome-wrapper .paragraph-link {
+  padding: 0px 10px 0px;
+}
+
+.welcome-wrapper .paragraph-link:hover {
+  color: #2e84a0;
+}
+
+@media only screen and (min-width: 380px) {
+  .welcome-wrapper .img-artwork {
+    width: 100%;
+    height: auto;
+  }
+
+  .welcome-wrapper .submit-button {
+    padding: 15px 40px 15px;
+  }
+
+  .welcome-wrapper h1 {
+    padding: 50px 0px 10px;
+  }
+  
+  .welcome-wrapper p {
+    padding: 0px 0px 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome-wrapper .img-artwork {
+    width: auto;
+    height: 65%;
+  }
+  
+  .welcome-wrapper .submit-button {
+    width: 50%;
+  }
+
+  .welcome-wrapper p {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .welcome-wrapper {
+    text-align: right;
+  }
+
+  .welcome-wrapper .img-artwork {
+    width: auto;
+    height: 90%;
+  }
+
+  .welcome-wrapper .submit-button {
+    margin-left: auto;
+    margin-right: 15%;
+    width: 25%;
+  }
+
+  .welcome-wrapper h1 {
+    clear: none;
+    padding: 0px, 0px, 0px;
+    padding-top: 25vh;
+    margin-right: 15.5%;
+  }
+
+  .welcome-wrapper p {
+    margin-right: 15.5%;
+    width: 30%;
+  }
+}
