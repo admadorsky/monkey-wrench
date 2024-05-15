@@ -3,6 +3,7 @@ import { signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/a
 import { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async"
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion"
 
 export const LogIn = () => {
 
@@ -47,7 +48,13 @@ export const LogIn = () => {
         <Helmet>
           <title>Sign In</title>
         </Helmet>
-        <h1>Log In</h1>
+        <h1 className="title">Log In</h1>
+        <button
+          onClick = {signInWithGoogle}
+          className="google-button"
+        >
+          Sign in with Google
+        </button>
         <input className="input-field"
           placeholder="Email..."
           onChange={(e) => setEmail(e.target.value)}
@@ -57,18 +64,16 @@ export const LogIn = () => {
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button
+        <motion.button
           onClick = {signInWithEmail}
           className="submit-button"
+          whileHover={{
+            boxShadow: "0px 15px 35px var(--shadow)",
+            transition: { duration: 0.1 }
+          }}
         >
           Sign In
-        </button>
-        <button
-          onClick = {signInWithGoogle}
-          className="alternate-button"
-        >
-          Sign in with Google
-        </button>
+        </motion.button>
         <button
           onClick = {logOut}
           className="caution-button"

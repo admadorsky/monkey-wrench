@@ -1,68 +1,167 @@
-.submit-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #09131c;
-  color: #e6cc9a;
-  padding: 8px 30px 8px;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  border: 2px solid #09131c;
+:root {
+  --yellow-orange: #DD8E22;
+  --red: #F9673A;
+  --blue: #6993F2;
+  --light-accent-1: #EFE5D3;
+  --light-accent-2: #E6CC9A;
+  --light-accent-3: #F8BAA8;
+  --light-1: #CBCBCB;
+  --light-2: #B7B7B7;
+  --medium-1: #8F8F8F;
+  --medium-2: #6A6A6A;
+  --dark-1: #4D4D4D;
+  --dark-2: #2B2B2B;
+  --shadow: #2b2b2b33;
+  --transparent: #00000000;
 }
 
-.submit-button:hover {
-  color: #09131c;
-  background-color: #00000000;
+html {
+  background-color: var(--dark-2);
 }
 
-.button-text {
+* {
   font-family: "Zilla Slab", serif;
-  font-optical-sizing: auto;
-  font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
+  transition-duration: 0.4s;
 }
 
-.welcome-wrapper .button-icon {
-  margin-left: auto;
+h1 {
+  font-family: "Lexend", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 28pt;
+  color: var(--dark-2);
+}
+
+h3 {
+  font-size: 12pt;
+  color: var(--dark-1);
 }
 
 p {
-  font-family: "Zilla Slab", serif;
-  font-optical-sizing: auto;
-  font-size: 16px;
-  font-weight: 300;
-  font-style: normal;
-  padding: 0px 0px 20px;
+  font-size: 10pt;
+  color: var(--medium-2);
+}
+
+.submit-button {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  background: var(--dark-2);
+  color: var(--light-accent-1);
+  border-radius: 18px;
+  border: 2px solid var(--dark-2);
+  padding: 0px 31px 0px;
+  font-size: 12pt;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.submit-button:hover {
+  background: var(--transparent);
+  color: var(--dark-2)
+}
+
+.google-button {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  background: var(--blue);
+  color: var(--light-accent-1);
+  border-radius: 18px;
+  border: 2px solid var(--blue);
+  padding: 0px 31px 0px;
+  font-size: 12pt;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.google-button:hover {
+  background: var(--transparent);
+  color: var(--blue);
+}
+
+.input-field {
+  box-sizing: border-box;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  background: var(--transparent);
+  color: var(--medium-1);
+  border-radius: 20px;
+  border: 2px solid var(--medium-1);
+  padding: 0px 31px 0px;
+  font-size: 12pt;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 380px) {
   h1 {
-    font-size: 44px;
+    font-size: 30pt;
+  }
+
+  h3 {
+    font-size: 14pt;
   }
 
   p {
-    font-size: 18px;
+    font-size: 12pt;
+  }
+
+  .submit-button {
+    height: 44px;
+    border-radius: 22px;
+    font-size: 14pt;
+  }
+
+  .google-button {
+    height: 44px;
+    border-radius: 22px;
+    font-size: 14pt;
+  }
+
+  .input-field {
+    height: 44px;
+    border-radius: 24px;
+    font-size: 14pt;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  p {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 1030px) {
-  .button-text {
-    font-size: 22px;
-  }
-
   h1 {
-    font-size: 54px;
+    font-size: 40pt;
+  }
+
+  h3 {
+    font-size: 20pt;
   }
 
   p {
-    font-size: 24px;
+    font-size: 16pt;
+  }
+
+  .submit-button {
+    height: 66px;
+    border-radius: 33px;
+    font-size: 16pt;
+  }
+
+  .google-button {
+    height: 66px;
+    border-radius: 33px;
+    font-size: 16pt;
+  }
+
+  .input-field {
+    height: 66px;
+    border-radius: 35px;
+    font-size: 16pt;
   }
 }
