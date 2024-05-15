@@ -2,7 +2,6 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
   background: var(--light-accent-1);
@@ -11,6 +10,8 @@
 .welcome-wrapper .img-artwork {
   background: linear-gradient(var(--light-accent-2) 78%, var(--transparent) 78%);
   padding-right: 50px;
+  max-height: 70%;
+  object-fit: scale-down;
   margin: -2px 0px 0px -2px;
 }
 
@@ -53,7 +54,7 @@
   }
 
   .welcome-wrapper .hint {
-    padding: 0px 50px 50px;
+    padding: 12px 50px 50px;
   }
   
   .welcome-wrapper .hint-link {
@@ -78,7 +79,7 @@
   }
 
   .welcome-wrapper .hint {
-    padding: 0px 82px 0px;
+    padding: 0px 82px 20px;
     margin: 17px 0px auto;
   }
 }
@@ -94,6 +95,7 @@
     flex-direction: row;
     align-items: center;
     justify-content:flex-start;
+    overflow: hidden;
   }
 
   .welcome-wrapper .copy-wrapper {
@@ -114,6 +116,11 @@
 
   .welcome-wrapper .loginform-wrapper .submit-button {
     display: flex;
+  }
+
+  .welcome-wrapper .loginform-wrapper .hint {
+    display: block;
+    padding: 0;
   }
 
   .welcome-wrapper .loginform-wrapper {

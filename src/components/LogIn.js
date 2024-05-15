@@ -42,11 +42,17 @@ export const LogIn = () => {
     navigate("/")
   }
 
+  const toCreateAccount= () => {
+    navigate("/create-account")
+  }
+
   return (
     <HelmetProvider>
       <div className="login-wrapper">
         <Helmet>
           <title>Sign In</title>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"/>
         </Helmet>
         <h1 className="title">Log In</h1>
         <button
@@ -73,7 +79,17 @@ export const LogIn = () => {
           }}
         >
           Sign In
+          <i className="material-icons">trending_flat</i>
         </motion.button>
+        <p className="hint">
+            Don't have an account?
+            <span
+              className="hint-link"
+              style={{fontWeight:"900"}}
+              onClick={toCreateAccount}>
+                Sign Up
+            </span>
+          </p>
         <button
           onClick = {logOut}
           className="caution-button"

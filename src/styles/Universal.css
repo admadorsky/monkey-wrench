@@ -16,7 +16,7 @@
 }
 
 html {
-  background-color: var(--dark-2);
+  background-color: var(--light-accent-1);
 }
 
 * {
@@ -42,6 +42,10 @@ h3 {
 p {
   font-size: 10pt;
   color: var(--medium-2);
+}
+
+.hint-link {
+  cursor: pointer;
 }
 
 .submit-button {
