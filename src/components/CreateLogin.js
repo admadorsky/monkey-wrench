@@ -1,18 +1,16 @@
-
 import { auth, googleProvider } from "../config/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async"
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export const CreateLogIn = () => {
+export const CreateLogInForm = () => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
   const navigate = useNavigate()
-
-  console.log(auth?.currentUser?.email)
 
   const signInWithEmail = async () => {
     try{
@@ -36,32 +34,40 @@ export const CreateLogIn = () => {
 
   return (
     <HelmetProvider>
-      <div>
+      <div className="loginform-wrapper">
         <Helmet>
           <title>Sign In</title>
         </Helmet>
-        <h1>Create Account</h1>
+        <button
+          onClick = {signInWithGoogle}
+          className="google-button"
+        >
+          Sign Up with Google
+        </button>
         <input className="input-field"
           placeholder="Email..."
           onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          autoComplete="on"
         />
         <input className="input-field"
           placeholder="Password..."
           type="password"
           onChange={(e) => setPassword(e.target.value)}
+          name="password"
+          autoComplete="on"
         />
-        <button
+        <motion.button
           onClick = {signInWithEmail}
           className="submit-button"
+          whileHover={{
+            boxShadow: "0px 15px 35px var(--shadow)",
+            transition: { duration: 0.1 }
+          }}
         >
-          Sign In
-        </button>
-        <button
-          onClick = {signInWithGoogle}
-          className="alternate-button"
-        >
-          Sign in with Google
-        </button>
+          Sign Up
+          <i className="material-icons">trending_flat</i>
+        </motion.button>
       </div>
     </HelmetProvider>
   )

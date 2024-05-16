@@ -30,8 +30,12 @@
   color: var(--light-2);
 }
 
-.login-wrapper .hint {
+.login-wrapper .mobile .hint {
   padding: 0px 46px 46px 46px;
+}
+
+.login-wrapper .desktop .hint {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) and (min-height: 1000px) {
@@ -44,7 +48,13 @@
     padding: 68px 45px 0px;
   }
 
-  .login-wrapper .hint {
-    padding: 0px 205px 120px;
+  .login-wrapper .mobile .hint {
+    display: none;
+  }
+
+  .login-wrapper .desktop .hint {
+    margin-top: 17px;
+    padding: 0;
+    display: block;
   }
 }

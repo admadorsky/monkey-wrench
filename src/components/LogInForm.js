@@ -63,11 +63,15 @@ export const LogInForm = () => {
         <input className="input-field"
           placeholder="Email..."
           onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          autoComplete="on"
         />
         <input className="input-field"
           placeholder="Password..."
           type="password"
           onChange={(e) => setPassword(e.target.value)}
+          name="password"
+          autoComplete="on"
         />
         <motion.button
           onClick = {signInWithEmail}

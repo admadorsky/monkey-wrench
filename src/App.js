@@ -5,7 +5,6 @@ import "./styles/LogInForm.css"
 import "./styles/LogIn.css"
 import { Welcome } from "./components/Welcome"
 import { LogIn } from "./components/LogIn"
-import { CreateLogIn } from './components/CreateLogin'
 import { Home } from "./components/Home"
 import { Helmet, HelmetProvider } from "react-helmet-async"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -30,10 +29,6 @@ function App() {
             <Route
               path="/login"
               element={<LogIn/>}
-            />
-            <Route
-              path="/create-account"
-              element={<CreateLogIn/>}
             />
             <Route
               path="/home"
