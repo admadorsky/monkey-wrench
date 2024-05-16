@@ -1,7 +1,8 @@
 import "./styles/App.css"
 import "./styles/Universal.css"
 import "./styles/Welcome.css"
-import "./styles/Login.css"
+import "./styles/LogInForm.css"
+import "./styles/LogIn.css"
 import { Welcome } from "./components/Welcome"
 import { LogIn } from "./components/LogIn"
 import { CreateLogIn } from './components/CreateLogin'

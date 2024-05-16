@@ -16,12 +16,12 @@
 }
 
 html {
-  background-color: var(--light-accent-1);
+  background-color: var(--dark-2);
 }
 
 * {
   font-family: "Zilla Slab", serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   transition-duration: 0.4s;
 }
@@ -106,6 +106,10 @@ p {
   overflow: hidden;
 }
 
+.hint-link {
+  padding: 0px 5px 0px;
+}
+
 @media only screen and (min-width: 380px) {
   h1 {
     font-size: 30pt;
@@ -167,5 +171,9 @@ p {
     height: 66px;
     border-radius: 35px;
     font-size: 16pt;
+  }
+
+  .hint {
+    padding: 0px 82px 20px;
   }
 }

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import welcomeImage from "../img/Welcome.png"
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion } from "framer-motion"
-import { LogIn } from "./LogIn"
+import { LogInForm } from "./LogInForm"
 
 export const Welcome = () => {
 
@@ -41,7 +41,7 @@ export const Welcome = () => {
               <i className="material-icons">trending_flat</i>
             </motion.button>
             <div className="loginform-wrapper">
-              <LogIn/>
+              <LogInForm/>
             </div>
           </div>
           <p className="hint">

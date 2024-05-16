@@ -9,9 +9,10 @@
 
 .welcome-wrapper .img-artwork {
   background: linear-gradient(var(--light-accent-2) 78%, var(--transparent) 78%);
-  padding-right: 50px;
-  max-height: 70%;
-  object-fit: scale-down;
+  padding-right: clamp(50px, auto, 200px);
+  max-height: 60%;
+  object-fit: contain;
+  object-position: left top;
   margin: -2px 0px 0px -2px;
 }
 
@@ -56,17 +57,12 @@
   .welcome-wrapper .hint {
     padding: 12px 50px 50px;
   }
-  
-  .welcome-wrapper .hint-link {
-    padding: 0px 5px 0px;
-  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-height: 1000px) {
   .welcome-wrapper .img-artwork {
     padding-right: 33vw;
-    max-height: 70%;
-    object-fit: contain;
+    max-height: 65%;
   }
 
   .welcome-wrapper .copy-wrapper {
@@ -81,12 +77,6 @@
   .welcome-wrapper .hint {
     padding: 0px 82px 20px;
     margin: 17px 0px auto;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  .welcome-wrapper .copy-wrapper {
-    padding: 12% 82px 0px;
   }
 }
 
@@ -105,6 +95,7 @@
   
   .welcome-wrapper .img-artwork {
     padding: 0px 0px 7% 0px;
+    height: 100%;
     max-height: 100%;
     max-width: 40%;
     background: linear-gradient(to right, var(--light-accent-2) 92%, var(--transparent) 92%);

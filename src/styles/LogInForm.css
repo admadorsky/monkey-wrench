@@ -1,0 +1,27 @@
+.loginform-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.loginform-wrapper .google-button {
+  margin: 18px -2px 0px;
+  width: 100%;
+}
+
+.loginform-wrapper .input-field {
+  width: 100%;
+  margin: 18px -2px 0px;
+}
+
+.loginform-wrapper .submit-button {
+  margin: 18px -2px 0px;
+  width: 100%;
+  border: 2px solid var(--light-accent-1);
+}
+
+.loginform-wrapper .submit-button:hover {
+  background: var(--transparent);
+  color: var(--light-accent-1);
+}
