@@ -18,10 +18,4 @@
 .loginform-wrapper .submit-button {
   margin: 18px -2px 0px;
   width: 100%;
-  border: 2px solid var(--light-accent-1);
-}
-
-.loginform-wrapper .submit-button:hover {
-  background: var(--transparent);
-  color: var(--light-accent-1);
 }

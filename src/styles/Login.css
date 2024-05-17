@@ -19,8 +19,15 @@
 
 .login-wrapper .submit-button {
   background-color: var(--light-accent-1);
-  color: var(--dark-2)
+  color: var(--dark-2);
+  border: 2px solid var(--light-accent-1);
 }
+
+.login-wrapper .submit-button:hover {
+  background: var(--transparent);
+  color: var(--light-accent-1);
+}
+
 
 .login-wrapper h1 {
   color: var(--light-accent-1)
@@ -28,6 +35,10 @@
 
 .login-wrapper p {
   color: var(--light-2);
+}
+
+.login-wrapper .custom-icon {
+  color: inherit;
 }
 
 .login-wrapper .mobile .hint {

@@ -15,6 +15,11 @@
   --transparent: #00000000;
 }
 
+@font-face {
+  font-family: 'Glyphter';
+  src: local('Glyphter'), url(../fonts/Glyphter.woff), format('woff');
+}
+
 html {
   background-color: var(--dark-2);
 }
@@ -42,10 +47,6 @@ h3 {
 p {
   font-size: 10pt;
   color: var(--medium-2);
-}
-
-.hint-link {
-  cursor: pointer;
 }
 
 .submit-button {
@@ -90,6 +91,11 @@ p {
   color: var(--blue);
 }
 
+.custom-icon {
+  font-family: 'Glyphter';
+  color: inherit;
+}
+
 .input-field {
   box-sizing: border-box;
   height: 36px;
@@ -108,6 +114,11 @@ p {
 
 .hint-link {
   padding: 0px 5px 0px;
+  cursor: pointer;
+}
+
+.hint-link:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 380px) {

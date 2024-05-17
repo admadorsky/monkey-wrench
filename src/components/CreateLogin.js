@@ -42,7 +42,8 @@ export const CreateLogInForm = () => {
           onClick = {signInWithGoogle}
           className="google-button"
         >
-          Sign Up with Google
+          Sign up with Google
+          <p className="custom-icon">A</p>
         </button>
         <input className="input-field"
           placeholder="Email..."

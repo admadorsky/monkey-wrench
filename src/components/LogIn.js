@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import logInImage from "../img/LogIn.png"
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion } from "framer-motion"
@@ -9,8 +9,10 @@ import { useState } from "react";
 export const LogIn = () => {
   
   const navigate = useNavigate()
+  const location = useLocation()
+  const data = location.state
 
-  const [loggingIn, setLoggingIn] = useState(true)
+  const [loggingIn, setLoggingIn] = useState(data)
 
   const toCreateAccount= () => {
     navigate("/create-account")

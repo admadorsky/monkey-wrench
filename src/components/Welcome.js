@@ -3,17 +3,21 @@ import welcomeImage from "../img/Welcome.png"
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion } from "framer-motion"
 import { LogInForm } from "./LogInForm"
+import { CreateLogInForm } from "./CreateLogin"
+import { useState } from "react";
 
 export const Welcome = () => {
 
   const navigate = useNavigate()
 
+  const [loggingIn, setLoggingIn] = useState(true)
+
   const toLogIn = () => {
-    navigate("/login")
+    navigate("/login", { state: true })
   }
 
-  const toCreateAccount= () => {
-    navigate("/create-account")
+  const toSignUp = () => {
+    navigate("/login", { state: false })
   }
 
   return (
@@ -41,20 +45,53 @@ export const Welcome = () => {
               <i className="material-icons">trending_flat</i>
             </motion.button>
             <div className="loginform-wrapper">
-              <LogInForm/>
+              { loggingIn ? <LogInForm/> : <CreateLogInForm/> }
+            </div>
+            <div className="desktop">
+              { loggingIn ? signUpHint() : logInHint() }
             </div>
           </div>
+          <div className="mobile">
           <p className="hint">
             Don't have an account?
             <span
               className="hint-link"
               style={{fontWeight:"900"}}
-              onClick={toCreateAccount}>
+              onClick={() => toSignUp()}>
                 Sign Up
-            </span>
-          </p>
+              </span>
+            </p>
+          </div>
         </div>
       </main>
     </HelmetProvider>
   );
+
+  function signUpHint() {
+    return (
+      <p className="hint">
+        Don't have an account?
+        <span
+          className="hint-link"
+          style={{fontWeight:"900"}}
+          onClick={() => setLoggingIn(false)}>
+            Sign Up
+        </span>
+      </p>
+    )
+  }
+
+  function logInHint() {
+    return (
+      <p className="hint">
+        Already have an account?
+        <span
+          className="hint-link"
+          style={{fontWeight:"900"}}
+          onClick={() => setLoggingIn(true)}>
+            Log In
+        </span>
+      </p>
+    )
+  }
 }

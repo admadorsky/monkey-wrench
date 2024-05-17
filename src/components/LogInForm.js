@@ -18,7 +18,7 @@ export const LogInForm = () => {
       navigate("/home")
     }
     catch (err) {
-        alert(err.code)
+        alert("Please enter a valid email and password.")
     }
   }
 
@@ -28,7 +28,7 @@ export const LogInForm = () => {
       navigate("/home")
     }
     catch (err) {
-      alert(err.code)
+      alert("Login with Google failed. Please try again.")
     }
   }
 
@@ -40,10 +40,6 @@ export const LogInForm = () => {
       alert(err.code)
     }
     navigate("/")
-  }
-
-  const toCreateAccount= () => {
-    navigate("/create-account")
   }
 
   return (
@@ -59,6 +55,7 @@ export const LogInForm = () => {
           className="google-button"
         >
           Sign in with Google
+          <p className="custom-icon">A</p>
         </button>
         <input className="input-field"
           placeholder="Email..."
